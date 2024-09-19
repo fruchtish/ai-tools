@@ -1,0 +1,366 @@
+<html><head><base href="https://websim.ai/ai-audio-tools">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Audio Tools - AI Tools Market</title>
+<style>
+    :root {
+        --primary-color: #4CAF50;
+        --secondary-color: #45a049;
+        --background-color: #f5f5f5;
+        --text-color: #333;
+        --header-footer-bg: #2c3e50;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background-color);
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    header {
+        background-color: var(--header-footer-bg);
+        color: #fff;
+        padding: 20px 0;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    nav ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 60px 0;
+    }
+
+    h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .subheading {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .audio-tools-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .audio-tool-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease;
+    }
+
+    .audio-tool-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .audio-tool-logo {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        margin-bottom: 15px;
+    }
+
+    .audio-tool-name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .audio-tool-description {
+        flex-grow: 1;
+        margin-bottom: 15px;
+    }
+
+    .audio-tool-category {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    footer {
+        background-color: var(--header-footer-bg);
+        color: #fff;
+        padding: 40px 0;
+        margin-top: 60px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-links ul {
+        list-style-type: none;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .newsletter-form input[type="email"] {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .newsletter-form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: var(--primary-color);
+        color: #fff;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 834px) {
+        .container {
+            padding: 0 15px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        .subheading {
+            font-size: 16px;
+        }
+
+        .audio-tools-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        h1 {
+            font-size: 28px;
+        }
+
+        .subheading {
+            font-size: 14px;
+        }
+
+        .audio-tools-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">AI Tools Market</div>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/ai-categories">Categories</a></li>
+                        <li><a href="/submit">Submit Tool</a></li>
+                        <li><a href="/signin">Sign In</a></li>
+                        <li><a href="/profile"><i class="fas fa-user-circle"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>AI Audio Tools</h1>
+                <p class="subheading">Discover powerful AI-driven tools for audio creation, editing, and enhancement</p>
+            </div>
+        </section>
+
+        <section class="audio-tools">
+            <div class="container">
+                <div class="audio-tools-grid">
+                    <div class="audio-tool-card">
+                        <a href="https://elevenlabs.io/" target="_blank">
+                            <img src="https://elevenlabs.io/assets/img/logo.svg" alt="ElevenLabs logo" class="audio-tool-logo" width="100" height="100">
+                        </a>
+                        <h2 class="audio-tool-name">ElevenLabs</h2>
+                        <p class="audio-tool-description">AI-powered text-to-speech platform with lifelike voices and emotion control.</p>
+                        <span class="audio-tool-category">Paid</span>
+                    </div>
+                    <div class="audio-tool-card">
+                        <a href="https://www.descript.com/" target="_blank">
+                            <img src="https://assets-global.website-files.com/5d761d627a6dfa6a5b28ab12/5e10c694b4a5d494cae45abe_descript-logo-black.svg" alt="Descript logo" class="audio-tool-logo" width="100" height="100">
+                        </a>
+                        <h2 class="audio-tool-name">Descript</h2>
+                        <p class="audio-tool-description">All-in-one audio and video editing platform with AI-powered features like transcription and voice cloning.</p>
+                        <span class="audio-tool-category">Freemium</span>
+                    </div>
+                    <div class="audio-tool-card">
+                        <a href="https://www.lalal.ai/" target="_blank">
+                            <img src="https://www.lalal.ai/img/lalal-ai-logo-light.svg" alt="LALAL.AI logo" class="audio-tool-logo" width="100" height="100">
+                        </a>
+                        <h2 class="audio-tool-name">LALAL.AI</h2>
+                        <p class="audio-tool-description">AI-powered stem separation tool for extracting vocals, instruments, and other audio components from music.</p>
+                        <span class="audio-tool-category">Freemium</span>
+                    </div>
+                    <div class="audio-tool-card">
+                        <a href="https://www.adobe.com/products/audition.html" target="_blank">
+                            <img src="https://www.adobe.com/content/dam/cc/icons/audition.svg" alt="Adobe Audition logo" class="audio-tool-logo" width="100" height="100">
+                        </a>
+                        <h2 class="audio-tool-name">Adobe Audition</h2>
+                        <p class="audio-tool-description">Professional audio workstation with AI-enhanced features for recording, editing, and restoring audio.</p>
+                        <span class="audio-tool-category">Paid</span>
+                    </div>
+                    <div class="audio-tool-card">
+                        <a href="https://www.izotope.com/en/products/rx.html" target="_blank">
+                            <img src="https://www.izotope.com/content/dam/izotope/rx/product-logos/rx-10/rx-10-standard-logo.png" alt="iZotope RX logo" class="audio-tool-logo" width="100" height="100">
+                        </a>
+                        <h2 class="audio-tool-name">iZotope RX</h2>
+                        <p class="audio-tool-description">Advanced audio repair and enhancement software with AI-powered modules for noise reduction and audio restoration.</p>
+                        <span class="audio-tool-category">Paid</span>
+                    </div>
+                    <div class="audio-tool-card">
+                        <a href="https://www.sonible.com/smart-eq3/" target="_blank">
+                            <img src="https://www.sonible.com/wp-content/uploads/2021/09/smart-eq3-plugin-logo.svg" alt="smart:EQ 3 logo" class="audio-tool-logo" width="100" height="100">
+                        </a>
+                        <h2 class="audio-tool-name">smart:EQ 3</h2>
+                        <p class="audio-tool-description">AI-powered equalizer plugin that automatically analyzes and balances the frequency spectrum of your audio.</p>
+                        <span class="audio-tool-category">Paid</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">AI Tools Market</div>
+                    <p>&copy; 2023 AI Tools Market. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="newsletter-signup">
+                    <h3>Subscribe to our newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.createElement('button');
+        menuToggle.innerHTML = '&#9776;';
+        menuToggle.style.display = 'none';
+        menuToggle.style.background = 'none';
+        menuToggle.style.border = 'none';
+        menuToggle.style.color = '#fff';
+        menuToggle.style.fontSize = '24px';
+        menuToggle.style.cursor = 'pointer';
+
+        const nav = document.querySelector('nav');
+        nav.parentNode.insertBefore(menuToggle, nav);
+
+        menuToggle.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        function handleResponsiveMenu() {
+            if (window.innerWidth <= 834) {
+                menuToggle.style.display = 'block';
+                nav.style.display = 'none';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '60px';
+                nav.style.right = '20px';
+                nav.style.backgroundColor = 'var(--header-footer-bg)';
+                nav.style.padding = '20px';
+                nav.style.borderRadius = '5px';
+            } else {
+                menuToggle.style.display = 'none';
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'row';
+                nav.style.position = 'static';
+                nav.style.backgroundColor = 'transparent';
+                nav.style.padding = '0';
+            }
+        }
+
+        window.addEventListener('resize', handleResponsiveMenu);
+        handleResponsiveMenu();
+    </script>
+</body>
+</html>

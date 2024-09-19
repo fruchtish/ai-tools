@@ -1,0 +1,347 @@
+<html><head><base href="https://websim.ai/ai-categories">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Categories - AI Tools Market</title>
+<style>
+    :root {
+        --primary-color: #4CAF50;
+        --secondary-color: #45a049;
+        --background-color: #f5f5f5;
+        --text-color: #333;
+        --header-footer-bg: #2c3e50;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background-color);
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    header {
+        background-color: var(--header-footer-bg);
+        color: #fff;
+        padding: 20px 0;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    nav ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    main {
+        padding: 40px 0;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .categories-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .category-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .category-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .category-icon {
+        font-size: 48px;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+    }
+
+    .category-name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .category-description {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 15px;
+    }
+
+    .category-link {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .category-link:hover {
+        background-color: var(--secondary-color);
+    }
+
+    footer {
+        background-color: var(--header-footer-bg);
+        color: #fff;
+        padding: 40px 0;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-links ul {
+        list-style-type: none;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .newsletter-form input[type="email"] {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .newsletter-form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: var(--primary-color);
+        color: #fff;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 834px) {
+        .container {
+            padding: 0 15px;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        .categories-grid {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .categories-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">AI Tools Market</div>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/submit">Submit Tool</a></li>
+                        <li><a href="/signin">Sign In</a></li>
+                        <li><a href="/profile"><i class="fas fa-user-circle"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>AI Categories</h1>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-pencil-alt"></i></div>
+                    <h2 class="category-name">Writing & Content Creation</h2>
+                    <p class="category-description">AI tools for generating articles, blogs, and marketing copy.</p>
+                    <a href="/ai-writing-tools" class="category-link">Explore Tools</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-image"></i></div>
+                    <h2 class="category-name">Image Generation</h2>
+                    <p class="category-description">Create unique images and artwork using AI algorithms.</p>
+                    <a href="/ai-image-generation-tools" class="category-link">Explore Tools</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-code"></i></div>
+                    <h2 class="category-name">Coding & Development</h2>
+                    <p class="category-description">AI-powered coding assistants and development tools.</p>
+                    <a href="/ai-coding-tools" class="category-link">Explore Tools</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h2 class="category-name">Data Analysis & Visualization</h2>
+                    <p class="category-description">AI tools for processing and visualizing complex data sets.</p>
+                    <a href="/ai-data-analysis-tools" class="category-link">Explore Tools</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-robot"></i></div>
+                    <h2 class="category-name">Chatbots & Conversational AI</h2>
+                    <p class="category-description">Build intelligent chatbots and virtual assistants.</p>
+                    <a href="/ai-chatbot-tools" class="category-link">Explore Tools</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-language"></i></div>
+                    <h2 class="category-name">Translation & Localization</h2>
+                    <p class="category-description">AI-powered language translation and localization tools.</p>
+                    <a href="/ai-translation-tools" class="category-link">Explore Tools</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-microphone"></i></div>
+                    <h2 class="category-name">Speech Recognition & Synthesis</h2>
+                    <p class="category-description">Convert speech to text and generate natural-sounding voices.</p>
+                    <a href="/ai-speech-tools" class="category-link">Explore Tools</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-brain"></i></div>
+                    <h2 class="category-name">Machine Learning & Deep Learning</h2>
+                    <p class="category-description">Tools and platforms for building and deploying ML models.</p>
+                    <a href="/ai-machine-learning-tools" class="category-link">Explore Tools</a>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon"><i class="fas fa-video"></i></div>
+                    <h2 class="category-name">Video Generation & Editing</h2>
+                    <p class="category-description">AI-powered video creation and editing tools.</p>
+                    <a href="/ai-video-tools" class="category-link">Explore Tools</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">AI Tools Market</div>
+                    <p>&copy; 2023 AI Tools Market. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="newsletter-signup">
+                    <h3>Subscribe to our newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.createElement('button');
+        menuToggle.innerHTML = '&#9776;';
+        menuToggle.style.display = 'none';
+        menuToggle.style.background = 'none';
+        menuToggle.style.border = 'none';
+        menuToggle.style.color = '#fff';
+        menuToggle.style.fontSize = '24px';
+        menuToggle.style.cursor = 'pointer';
+
+        const nav = document.querySelector('nav');
+        nav.parentNode.insertBefore(menuToggle, nav);
+
+        menuToggle.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        function handleResponsiveMenu() {
+            if (window.innerWidth <= 834) {
+                menuToggle.style.display = 'block';
+                nav.style.display = 'none';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '60px';
+                nav.style.right = '20px';
+                nav.style.backgroundColor = 'var(--header-footer-bg)';
+                nav.style.padding = '20px';
+                nav.style.borderRadius = '5px';
+            } else {
+                menuToggle.style.display = 'none';
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'row';
+                nav.style.position = 'static';
+                nav.style.backgroundColor = 'transparent';
+                nav.style.padding = '0';
+            }
+        }
+
+        window.addEventListener('resize', handleResponsiveMenu);
+        handleResponsiveMenu();
+    </script>
+</body>
+</html>

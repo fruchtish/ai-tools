@@ -1,0 +1,372 @@
+<html><head><base href="https://websim.ai/ai-image-generation-tools">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Image Generation Tools - AI Tools Market</title>
+<style>
+    :root {
+        --primary-color: #4CAF50;
+        --secondary-color: #45a049;
+        --background-color: #f5f5f5;
+        --text-color: #333;
+        --header-footer-bg: #2c3e50;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background-color);
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    header {
+        background-color: var(--header-footer-bg);
+        color: #fff;
+        padding: 20px 0;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    nav ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 60px 0;
+        background-image: url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+    }
+
+    h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .subheading {
+        font-size: 18px;
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .tools-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .tool-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .tool-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .tool-logo {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        margin-bottom: 15px;
+    }
+
+    .tool-name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .tool-description {
+        margin-bottom: 15px;
+    }
+
+    .tool-link {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .tool-link:hover {
+        background-color: var(--secondary-color);
+    }
+
+    footer {
+        background-color: var(--header-footer-bg);
+        color: #fff;
+        padding: 40px 0;
+        margin-top: 60px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-links ul {
+        list-style-type: none;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .newsletter-form input[type="email"] {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .newsletter-form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: var(--primary-color);
+        color: #fff;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 834px) {
+        .container {
+            padding: 0 15px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        .subheading {
+            font-size: 16px;
+        }
+
+        .tools-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        h1 {
+            font-size: 28px;
+        }
+
+        .subheading {
+            font-size: 14px;
+        }
+
+        .tools-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">AI Tools Market</div>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/ai-categories">Categories</a></li>
+                        <li><a href="/submit">Submit Tool</a></li>
+                        <li><a href="/signin">Sign In</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>AI Image Generation Tools</h1>
+                <p class="subheading">Explore cutting-edge AI-powered tools for creating stunning visuals and artwork</p>
+            </div>
+        </section>
+
+        <section class="tools">
+            <div class="container">
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <a href="https://www.midjourney.com" target="_blank">
+                            <img src="https://seeklogo.com/images/M/midjourney-logo-3477535CD3-seeklogo.com.png" alt="Midjourney logo" class="tool-logo">
+                        </a>
+                        <h2 class="tool-name">Midjourney</h2>
+                        <p class="tool-description">An AI-powered tool that generates images from textual descriptions, creating unique and imaginative artwork.</p>
+                        <a href="/midjourney" class="tool-link">Paid</a>
+                    </div>
+                    <div class="tool-card">
+                        <a href="https://www.dall-e.com" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/OpenAI_logo.svg/1200px-OpenAI_logo.svg.png" alt="DALL-E logo" class="tool-logo">
+                        </a>
+                        <h2 class="tool-name">DALL-E</h2>
+                        <p class="tool-description">OpenAI's image generation model that creates images from textual descriptions with high accuracy and creativity.</p>
+                        <a href="/dall-e" class="tool-link">Freemium</a>
+                    </div>
+                    <div class="tool-card">
+                        <a href="https://stability.ai" target="_blank">
+                            <img src="https://media.licdn.com/dms/image/D4D0BAQGDVoOsXOr0mA/company-logo_200_200/0/1686152131769?e=2147483647&v=beta&t=1nSX47O7N5RHsJ8TOJMo5UKUPjhOBcvZvhOFydNp9Sc" alt="Stable Diffusion logo" class="tool-logo">
+                        </a>
+                        <h2 class="tool-name">Stable Diffusion</h2>
+                        <p class="tool-description">An open-source image generation model known for its speed and ability to create high-quality images from text prompts.</p>
+                        <a href="/stable-diffusion" class="tool-link">Free</a>
+                    </div>
+                    <div class="tool-card">
+                        <a href="https://www.artbreeder.com" target="_blank">
+                            <img src="https://static-00.iconduck.com/assets.00/artbreeder-icon-512x512-wy3psipm.png" alt="Artbreeder logo" class="tool-logo">
+                        </a>
+                        <h2 class="tool-name">Artbreeder</h2>
+                        <p class="tool-description">A collaborative art tool that uses AI to blend and evolve images, creating unique and surprising results.</p>
+                        <a href="/artbreeder" class="tool-link">Freemium</a>
+                    </div>
+                    <div class="tool-card">
+                        <a href="https://www.nightcafe.studio" target="_blank">
+                            <img src="https://pbs.twimg.com/profile_images/1437444736726396931/g7l_5N8h_400x400.jpg" alt="NightCafe logo" class="tool-logo">
+                        </a>
+                        <h2 class="tool-name">NightCafe</h2>
+                        <p class="tool-description">An AI art generator that offers various styles and algorithms to create stunning artwork from text prompts.</p>
+                        <a href="/nightcafe" class="tool-link">Freemium</a>
+                    </div>
+                    <div class="tool-card">
+                        <a href="https://www.wombo.art" target="_blank">
+                            <img src="https://play-lh.googleusercontent.com/UAFx4Ycpxrtf14a8-9KuBLjq5LbY_RiEf2a8s6U53OLCbB8pKZxmU_LX0eACM7JQP8Q=w240-h480-rw" alt="Wombo Dream logo" class="tool-logo">
+                        </a>
+                        <h2 class="tool-name">Wombo Dream</h2>
+                        <p class="tool-description">A mobile app that turns your ideas into AI-powered artwork with various artistic styles.</p>
+                        <a href="/wombo-dream" class="tool-link">Freemium</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">AI Tools Market</div>
+                    <p>&copy; 2023 AI Tools Market. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="newsletter-signup">
+                    <h3>Subscribe to our newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.createElement('button');
+        menuToggle.innerHTML = '&#9776;';
+        menuToggle.style.display = 'none';
+        menuToggle.style.background = 'none';
+        menuToggle.style.border = 'none';
+        menuToggle.style.color = '#fff';
+        menuToggle.style.fontSize = '24px';
+        menuToggle.style.cursor = 'pointer';
+
+        const nav = document.querySelector('nav');
+        nav.parentNode.insertBefore(menuToggle, nav);
+
+        menuToggle.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        function handleResponsiveMenu() {
+            if (window.innerWidth <= 834) {
+                menuToggle.style.display = 'block';
+                nav.style.display = 'none';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '60px';
+                nav.style.right = '20px';
+                nav.style.backgroundColor = 'var(--header-footer-bg)';
+                nav.style.padding = '20px';
+                nav.style.borderRadius = '5px';
+            } else {
+                menuToggle.style.display = 'none';
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'row';
+                nav.style.position = 'static';
+                nav.style.backgroundColor = 'transparent';
+                nav.style.padding = '0';
+            }
+        }
+
+        window.addEventListener('resize', handleResponsiveMenu);
+        handleResponsiveMenu();
+    </script>
+</body>
+</html>

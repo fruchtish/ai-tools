@@ -1,0 +1,555 @@
+<html><head><base href="https://websim.ai/all-tools">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All AI Tools - AI Tools Market</title>
+<style>
+    :root {
+        --primary-color: #4CAF50;
+        --secondary-color: #45a049;
+        --background-color: #f5f5f5;
+        --text-color: #333;
+        --header-footer-bg: #2c3e50;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background-color);
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    header {
+        background-color: var(--header-footer-bg);
+        color: #fff;
+        padding: 20px 0;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    nav ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    main {
+        padding: 40px 0;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .filter-options {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+
+    .filter-options > * {
+        margin: 5px;
+    }
+
+    .search-bar {
+        flex-grow: 1;
+        max-width: 400px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .filter-options select {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .tools-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .tool-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tool-card img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        margin-bottom: 15px;
+    }
+
+    .tool-name {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .tool-description {
+        flex-grow: 1;
+        margin-bottom: 15px;
+    }
+
+    .tool-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+    }
+
+    .pricing-label {
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+    .user-rating {
+        display: flex;
+        align-items: center;
+    }
+
+    .user-rating .star {
+        color: gold;
+        margin-right: 5px;
+    }
+
+    .heart-icon {
+        color: #ccc;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    .heart-icon:hover, .heart-icon.active {
+        color: red;
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .pagination button {
+        background-color: var(--primary-color);
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        margin: 0 5px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .pagination button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+
+    footer {
+        background-color: var(--header-footer-bg);
+        color: #fff;
+        padding: 40px 0;
+        margin-top: 40px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-links ul {
+        list-style-type: none;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .newsletter-form input[type="email"] {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .newsletter-form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: var(--primary-color);
+        color: #fff;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 834px) {
+        .container {
+            padding: 0 15px;
+        }
+
+        .tools-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .tools-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .filter-options {
+            flex-direction: column;
+        }
+
+        .filter-options > * {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">AI Tools Market</div>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/submit">Submit Tool</a></li>
+                        <li><a href="/signin">Sign In</a></li>
+                        <li><a href="/profile"><i class="fas fa-user-circle"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>All AI Tools</h1>
+            <div class="filter-options">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search AI tools">
+                </div>
+                <select id="category-filter">
+                    <option value="">All Categories</option>
+                    <option value="writing">Writing</option>
+                    <option value="image">Image Generation</option>
+                    <option value="coding">Coding</option>
+                    <option value="data">Data Analysis</option>
+                    <option value="chatbots">Chatbots</option>
+                    <option value="translation">Translation</option>
+                </select>
+                <select id="pricing-filter">
+                    <option value="">All Pricing</option>
+                    <option value="free">Free</option>
+                    <option value="freemium">Freemium</option>
+                    <option value="paid">Paid</option>
+                </select>
+            </div>
+            <div class="tools-grid" id="tools-grid">
+                <!-- Tool cards will be dynamically inserted here -->
+            </div>
+            <div class="pagination">
+                <button id="prev-page" disabled>Previous</button>
+                <span id="page-info">Page 1 of 1</span>
+                <button id="next-page">Next</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">AI Tools Market</div>
+                    <p>&copy; 2023 AI Tools Market. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="newsletter-signup">
+                    <h3>Subscribe to our newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toolsData = [
+            {
+                name: "ChatGPT",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+                description: "Advanced language model for natural conversations and text generation.",
+                category: "chatbots",
+                pricing: "freemium",
+                rating: 4.8,
+                url: "https://chat.openai.com/"
+            },
+            {
+                name: "DALL-E 2",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/e/e6/DALL-E_2_Icon.svg",
+                description: "AI system that creates realistic images and art from natural language descriptions.",
+                category: "image",
+                pricing: "paid",
+                rating: 4.7,
+                url: "https://openai.com/dall-e-2/"
+            },
+            {
+                name: "Grammarly",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Grammarly_logo.svg/1200px-Grammarly_logo.svg.png",
+                description: "AI-powered writing assistant for grammar, spelling, and style improvements.",
+                category: "writing",
+                pricing: "freemium",
+                rating: 4.6,
+                url: "https://www.grammarly.com/"
+            },
+            {
+                name: "TensorFlow",
+                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/1200px-Tensorflow_logo.svg.png",
+                description: "Open-source machine learning framework for developing and training AI models.",
+                category: "coding",
+                pricing: "free",
+                rating: 4.8,
+                url: "https://www.tensorflow.org/"
+            },
+            {
+                name: "IBM Watson",
+                logo: "https://upload.wikimedia.org/wikipedia/en/thumb/0/00/IBM_Watson_Logo_2017.png/220px-IBM_Watson_Logo_2017.png",
+                description: "AI platform for natural language processing, machine learning, and data analysis.",
+                category: "data",
+                pricing: "paid",
+                rating: 4.5,
+                url: "https://www.ibm.com/watson"
+            },
+            {
+                name: "DeepL",
+                logo: "https://static.deepl.com/img/logo/deepl-logo-blue.svg",
+                description: "AI-powered language translator known for its accuracy and natural-sounding translations.",
+                category: "translation",
+                pricing: "freemium",
+                rating: 4.7,
+                url: "https://www.deepl.com/"
+            }
+        ];
+
+        const toolsGrid = document.getElementById('tools-grid');
+        const searchInput = document.getElementById('search-input');
+        const categoryFilter = document.getElementById('category-filter');
+        const pricingFilter = document.getElementById('pricing-filter');
+        const prevPageBtn = document.getElementById('prev-page');
+        const nextPageBtn = document.getElementById('next-page');
+        const pageInfo = document.getElementById('page-info');
+
+        let currentPage = 1;
+        const itemsPerPage = 6;
+
+        function renderToolCard(tool) {
+            return `
+                <div class="tool-card">
+                    <a href="${tool.url}" target="_blank" rel="noopener noreferrer">
+                        <img src="${tool.logo}" alt="${tool.name} Logo" width="80" height="80">
+                    </a>
+                    <h3 class="tool-name">${tool.name}</h3>
+                    <p class="tool-description">${tool.description}</p>
+                    <div class="tool-meta">
+                        <a href="/ai-tools/${tool.pricing}" class="pricing-label">${tool.pricing.charAt(0).toUpperCase() + tool.pricing.slice(1)}</a>
+                        <div class="user-rating">
+                            <span class="star">★</span>
+                            <span>${tool.rating.toFixed(1)}</span>
+                        </div>
+                        <i class="fas fa-heart heart-icon"></i>
+                    </div>
+                </div>
+            `;
+        }
+
+        function filterTools() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const categoryValue = categoryFilter.value;
+            const pricingValue = pricingFilter.value;
+
+            return toolsData.filter(tool => {
+                const matchesSearch = tool.name.toLowerCase().includes(searchTerm) || 
+                                      tool.description.toLowerCase().includes(searchTerm);
+                const matchesCategory = categoryValue === '' || tool.category === categoryValue;
+                const matchesPricing = pricingValue === '' || tool.pricing === pricingValue;
+
+                return matchesSearch && matchesCategory && matchesPricing;
+            });
+        }
+
+        function renderTools() {
+            const filteredTools = filterTools();
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const toolsToRender = filteredTools.slice(startIndex, endIndex);
+
+            toolsGrid.innerHTML = toolsToRender.map(renderToolCard).join('');
+
+            // Update pagination
+            const totalPages = Math.ceil(filteredTools.length / itemsPerPage);
+            pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+            prevPageBtn.disabled = currentPage === 1;
+            nextPageBtn.disabled = currentPage === totalPages;
+        }
+
+        searchInput.addEventListener('input', () => {
+            currentPage = 1;
+            renderTools();
+        });
+
+        categoryFilter.addEventListener('change', () => {
+            currentPage = 1;
+            renderTools();
+        });
+
+        pricingFilter.addEventListener('change', () => {
+            currentPage = 1;
+            renderTools();
+        });
+
+        prevPageBtn.addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                renderTools();
+            }
+        });
+
+        nextPageBtn.addEventListener('click', () => {
+            const filteredTools = filterTools();
+            const totalPages = Math.ceil(filteredTools.length / itemsPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderTools();
+            }
+        });
+
+        // Initial render
+        renderTools();
+
+        // Heart icon functionality
+        toolsGrid.addEventListener('click', (e) => {
+            if (e.target.classList.contains('heart-icon')) {
+                e.target.classList.toggle('active');
+            }
+        });
+
+        // Responsive menu
+        const menuToggle = document.createElement('button');
+        menuToggle.innerHTML = '&#9776;';
+        menuToggle.style.display = 'none';
+        menuToggle.style.background = 'none';
+        menuToggle.style.border = 'none';
+        menuToggle.style.color = '#fff';
+        menuToggle.style.fontSize = '24px';
+        menuToggle.style.cursor = 'pointer';
+
+        const nav = document.querySelector('nav');
+        nav.parentNode.insertBefore(menuToggle, nav);
+
+        menuToggle.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        function handleResponsiveMenu() {
+            if (window.innerWidth <= 834) {
+                menuToggle.style.display = 'block';
+                nav.style.display = 'none';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '60px';
+                nav.style.right = '20px';
+                nav.style.backgroundColor = 'var(--header-footer-bg)';
+                nav.style.padding = '20px';
+                nav.style.borderRadius = '5px';
+            } else {
+                menuToggle.style.display = 'none';
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'row';
+                nav.style.position = 'static';
+                nav.style.backgroundColor = 'transparent';
+                nav.style.padding = '0';
+            }
+        }
+
+        window.addEventListener('resize', handleResponsiveMenu);
+        handleResponsiveMenu();
+    </script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<html><head><base href="https://websim.ai/ai-research-tools">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Research Tools - AI Tools Market</title>
+<style>
+    :root {
+        --primary-color: #4CAF50;
+        --secondary-color: #45a049;
+        --background-color: #f5f5f5;
+        --text-color: #333;
+        --header-footer-bg: #2c3e50;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background-color);
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    header {
+        background-color: var(--header-footer-bg);
+        color: #fff;
+        padding: 20px 0;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    nav ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    main {
+        padding: 40px 0;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .tools-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .tool-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tool-logo {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        margin-bottom: 15px;
+        align-self: center;
+    }
+
+    .tool-name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .tool-description {
+        flex-grow: 1;
+        margin-bottom: 15px;
+    }
+
+    .tool-category {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    footer {
+        background-color: var(--header-footer-bg);
+        color: #fff;
+        padding: 20px 0;
+        margin-top: 40px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 768px) {
+        .tools-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .footer-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .footer-content > * {
+            margin-bottom: 10px;
+        }
+    }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">AI Tools Market</div>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/categories">Categories</a></li>
+                        <li><a href="/submit">Submit Tool</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>AI Research Tools</h1>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <a href="https://www.tensorflow.org/" target="_blank">
+                        <img src="https://www.tensorflow.org/images/tf_logo_social.png" alt="TensorFlow logo" class="tool-logo">
+                    </a>
+                    <h2 class="tool-name">TensorFlow</h2>
+                    <p class="tool-description">An open-source machine learning framework developed by Google for building and deploying ML models.</p>
+                    <span class="tool-category">Free</span>
+                </div>
+                <div class="tool-card">
+                    <a href="https://pytorch.org/" target="_blank">
+                        <img src="https://pytorch.org/assets/images/pytorch-logo.png" alt="PyTorch logo" class="tool-logo">
+                    </a>
+                    <h2 class="tool-name">PyTorch</h2>
+                    <p class="tool-description">An open-source machine learning library developed by Facebook's AI Research lab for applications such as computer vision and NLP.</p>
+                    <span class="tool-category">Free</span>
+                </div>
+                <div class="tool-card">
+                    <a href="https://scikit-learn.org/" target="_blank">
+                        <img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" alt="Scikit-learn logo" class="tool-logo">
+                    </a>
+                    <h2 class="tool-name">Scikit-learn</h2>
+                    <p class="tool-description">A machine learning library for Python, featuring various classification, regression and clustering algorithms.</p>
+                    <span class="tool-category">Free</span>
+                </div>
+                <div class="tool-card">
+                    <a href="https://www.kaggle.com/" target="_blank">
+                        <img src="https://www.kaggle.com/static/images/site-logo.png" alt="Kaggle logo" class="tool-logo">
+                    </a>
+                    <h2 class="tool-name">Kaggle</h2>
+                    <p class="tool-description">An online community of data scientists and machine learning practitioners, offering datasets, notebooks, and competitions.</p>
+                    <span class="tool-category">Freemium</span>
+                </div>
+                <div class="tool-card">
+                    <a href="https://colab.research.google.com/" target="_blank">
+                        <img src="https://colab.research.google.com/img/colab_favicon_256px.png" alt="Google Colab logo" class="tool-logo">
+                    </a>
+                    <h2 class="tool-name">Google Colab</h2>
+                    <p class="tool-description">A free cloud service that supports free GPU, allowing you to run and execute Python code through the browser.</p>
+                    <span class="tool-category">Free</span>
+                </div>
+                <div class="tool-card">
+                    <a href="https://www.openai.com/" target="_blank">
+                        <img src="https://openai.com/content/images/2022/05/openai-avatar.png" alt="OpenAI logo" class="tool-logo">
+                    </a>
+                    <h2 class="tool-name">OpenAI Gym</h2>
+                    <p class="tool-description">A toolkit for developing and comparing reinforcement learning algorithms, providing a wide variety of simulated environments.</p>
+                    <span class="tool-category">Free</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2023 AI Tools Market. All rights reserved.</p>
+                <nav>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling to all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Lazy loading for images
+        document.addEventListener("DOMContentLoaded", function() {
+            var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.classList.remove("lazy");
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<html><head><base href="https://websim.ai/about">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About AI Tools Market</title>
+<style>
+    :root {
+        --primary-color: #4CAF50;
+        --secondary-color: #45a049;
+        --background-color: #f5f5f5;
+        --text-color: #333;
+        --header-footer-bg: #2c3e50;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background-color);
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    header {
+        background-color: var(--header-footer-bg);
+        color: #fff;
+        padding: 20px 0;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    nav ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    main {
+        padding: 60px 0;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .about-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .about-text {
+        flex-basis: calc(60% - 30px);
+    }
+
+    .about-image {
+        flex-basis: calc(40% - 30px);
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    .team-section {
+        margin-top: 60px;
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .team-member {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-member img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+
+    .team-member h3 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .team-member p {
+        font-style: italic;
+        color: #666;
+    }
+
+    footer {
+        background-color: var(--header-footer-bg);
+        color: #fff;
+        padding: 40px 0;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-links ul {
+        list-style-type: none;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .newsletter-form input[type="email"] {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .newsletter-form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: var(--primary-color);
+        color: #fff;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 834px) {
+        .about-content {
+            flex-direction: column;
+        }
+
+        .about-text, .about-image {
+            flex-basis: 100%;
+        }
+
+        .about-image {
+            margin-top: 30px;
+        }
+
+        .team-grid {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        h1 {
+            font-size: 28px;
+        }
+
+        .team-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">AI Tools Market</div>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/tools">Tools</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>About AI Tools Market</h1>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Mission</h2>
+                    <p>At AI Tools Market, we are passionate about bringing the power of artificial intelligence to everyone. Our mission is to curate and showcase the best AI tools available, making it easy for individuals and businesses to discover, compare, and implement cutting-edge AI solutions.</p>
+                    
+                    <h2>What We Do</h2>
+                    <p>We scour the internet to find the most innovative and useful AI tools across various categories, including writing, image generation, coding, data analysis, chatbots, and translation. Our team thoroughly evaluates each tool, providing detailed information, user ratings, and pricing options to help you make informed decisions.</p>
+                    
+                    <h2>Why Choose Us</h2>
+                    <p>With the rapidly evolving AI landscape, it can be challenging to keep up with the latest tools and technologies. That's where we come in. We offer:</p>
+                    <ul>
+                        <li>A comprehensive database of AI tools, updated daily</li>
+                        <li>Unbiased reviews and ratings from real users</li>
+                        <li>Easy-to-use search and filter options</li>
+                        <li>Detailed information on pricing, features, and use cases</li>
+                        <li>A community of AI enthusiasts and professionals</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://websim.ai/images/ai-tools-market-team.jpg" alt="AI Tools Market Team" width="500" height="333">
+                </div>
+            </div>
+            
+            <div class="team-section">
+                <h2>Meet Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="https://websim.ai/images/team-member-1.jpg" alt="Sarah Johnson" width="150" height="150">
+                        <h3>Sarah Johnson</h3>
+                        <p>Founder & CEO</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://websim.ai/images/team-member-2.jpg" alt="Michael Chen" width="150" height="150">
+                        <h3>Michael Chen</h3>
+                        <p>CTO</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://websim.ai/images/team-member-3.jpg" alt="Emily Rodriguez" width="150" height="150">
+                        <h3>Emily Rodriguez</h3>
+                        <p>Head of Content</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://websim.ai/images/team-member-4.jpg" alt="David Kim" width="150" height="150">
+                        <h3>David Kim</h3>
+                        <p>Lead Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">AI Tools Market</div>
+                    <p>&copy; 2023 AI Tools Market. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/tools">Tools</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="newsletter-signup">
+                    <h3>Subscribe to our newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.createElement('button');
+        menuToggle.innerHTML = '&#9776;';
+        menuToggle.style.display = 'none';
+        menuToggle.style.background = 'none';
+        menuToggle.style.border = 'none';
+        menuToggle.style.color = '#fff';
+        menuToggle.style.fontSize = '24px';
+        menuToggle.style.cursor = 'pointer';
+
+        const nav = document.querySelector('nav');
+        nav.parentNode.insertBefore(menuToggle, nav);
+
+        menuToggle.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        function handleResponsiveMenu() {
+            if (window.innerWidth <= 834) {
+                menuToggle.style.display = 'block';
+                nav.style.display = 'none';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '60px';
+                nav.style.right = '20px';
+                nav.style.backgroundColor = 'var(--header-footer-bg)';
+                nav.style.padding = '20px';
+                nav.style.borderRadius = '5px';
+            } else {
+                menuToggle.style.display = 'none';
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'row';
+                nav.style.position = 'static';
+                nav.style.backgroundColor = 'transparent';
+                nav.style.padding = '0';
+            }
+        }
+
+        window.addEventListener('resize', handleResponsiveMenu);
+        handleResponsiveMenu();
+    </script>
+</body>
+</html>

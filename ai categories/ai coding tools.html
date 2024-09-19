@@ -1,0 +1,372 @@
+<html><head><base href="https://websim.ai/ai-coding-tools">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Coding Tools - AI Tools Market</title>
+<style>
+    :root {
+        --primary-color: #4CAF50;
+        --secondary-color: #45a049;
+        --background-color: #f5f5f5;
+        --text-color: #333;
+        --header-footer-bg: #2c3e50;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background-color);
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    header {
+        background-color: var(--header-footer-bg);
+        color: #fff;
+        padding: 20px 0;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    nav ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 60px 0;
+    }
+
+    h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .subheading {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .tool-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .tool-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease;
+    }
+
+    .tool-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .tool-logo {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        margin-bottom: 15px;
+        align-self: center;
+    }
+
+    .tool-name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .tool-description {
+        margin-bottom: 15px;
+        flex-grow: 1;
+    }
+
+    .tool-link {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        text-align: center;
+    }
+
+    .tool-link:hover {
+        background-color: var(--secondary-color);
+    }
+
+    footer {
+        background-color: var(--header-footer-bg);
+        color: #fff;
+        padding: 40px 0;
+        margin-top: 60px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-links ul {
+        list-style-type: none;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .newsletter-form input[type="email"] {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .newsletter-form button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: var(--primary-color);
+        color: #fff;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 834px) {
+        .container {
+            padding: 0 15px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        .subheading {
+            font-size: 16px;
+        }
+
+        .tool-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        h1 {
+            font-size: 28px;
+        }
+
+        .subheading {
+            font-size: 14px;
+        }
+
+        .tool-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">AI Tools Market</div>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/ai-categories">Categories</a></li>
+                        <li><a href="/submit">Submit Tool</a></li>
+                        <li><a href="/signin">Sign In</a></li>
+                        <li><a href="/profile"><i class="fas fa-user-circle"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>AI Coding Tools</h1>
+                <p class="subheading">Discover powerful AI-driven tools to enhance your coding and development process</p>
+            </div>
+        </section>
+
+        <section class="tools">
+            <div class="container">
+                <div class="tool-grid">
+                    <div class="tool-card">
+                        <a href="https://github.com/features/copilot" target="_blank">
+                            <img src="https://github.githubassets.com/images/modules/site/copilot/copilot-logo.png" alt="GitHub Copilot logo" class="tool-logo">
+                        </a>
+                        <h2 class="tool-name">GitHub Copilot</h2>
+                        <p class="tool-description">AI-powered code completion tool that helps developers write code faster and with fewer errors.</p>
+                        <a href="https://github.com/features/copilot" class="tool-link">Try GitHub Copilot</a>
+                    </div>
+                    <div class="tool-card">
+                        <a href="https://www.tabnine.com/" target="_blank">
+                            <img src="https://www.tabnine.com/static/media/tabnine-logo.24248675.svg" alt="Tabnine logo" class="tool-logo">
+                        </a>
+                        <h2 class="tool-name">Tabnine</h2>
+                        <p class="tool-description">AI assistant for software developers, providing code completions based on millions of programs.</p>
+                        <a href="https://www.tabnine.com/" class="tool-link">Explore Tabnine</a>
+                    </div>
+                    <div class="tool-card">
+                        <a href="https://www.kite.com/" target="_blank">
+                            <img src="https://www.kite.com/wp-content/themes/kite/img/kite-logo.svg" alt="Kite logo" class="tool-logo">
+                        </a>
+                        <h2 class="tool-name">Kite</h2>
+                        <p class="tool-description">AI-powered coding assistant that helps developers code faster with smart completions and documentation.</p>
+                        <a href="https://www.kite.com/" class="tool-link">Get Kite</a>
+                    </div>
+                    <div class="tool-card">
+                        <a href="https://www.codota.com/" target="_blank">
+                            <img src="https://www.codota.com/wp-content/uploads/2020/05/codota_logo.svg" alt="Codota logo" class="tool-logo">
+                        </a>
+                        <h2 class="tool-name">Codota</h2>
+                        <p class="tool-description">AI-powered code completion and code examples to help developers code smarter and faster.</p>
+                        <a href="https://www.codota.com/" class="tool-link">Try Codota</a>
+                    </div>
+                    <div class="tool-card">
+                        <a href="https://www.deepcode.ai/" target="_blank">
+                            <img src="https://www.deepcode.ai/images/logo.svg" alt="DeepCode logo" class="tool-logo">
+                        </a>
+                        <h2 class="tool-name">DeepCode</h2>
+                        <p class="tool-description">AI-powered static code analysis tool that helps developers find and fix bugs quickly.</p>
+                        <a href="https://www.deepcode.ai/" class="tool-link">Discover DeepCode</a>
+                    </div>
+                    <div class="tool-card">
+                        <a href="https://www.deepsource.io/" target="_blank">
+                            <img src="https://assets.website-files.com/5e0a5d9d743608d0f3ea6753/5e0a5d9d7436086c4bea6840_logo.svg" alt="DeepSource logo" class="tool-logo">
+                        </a>
+                        <h2 class="tool-name">DeepSource</h2>
+                        <p class="tool-description">Automated code review tool that uses AI to find and fix issues in your code.</p>
+                        <a href="https://www.deepsource.io/" class="tool-link">Try DeepSource</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">AI Tools Market</div>
+                    <p>&copy; 2023 AI Tools Market. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="newsletter-signup">
+                    <h3>Subscribe to our newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.createElement('button');
+        menuToggle.innerHTML = '&#9776;';
+        menuToggle.style.display = 'none';
+        menuToggle.style.background = 'none';
+        menuToggle.style.border = 'none';
+        menuToggle.style.color = '#fff';
+        menuToggle.style.fontSize = '24px';
+        menuToggle.style.cursor = 'pointer';
+
+        const nav = document.querySelector('nav');
+        nav.parentNode.insertBefore(menuToggle, nav);
+
+        menuToggle.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        function handleResponsiveMenu() {
+            if (window.innerWidth <= 834) {
+                menuToggle.style.display = 'block';
+                nav.style.display = 'none';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '60px';
+                nav.style.right = '20px';
+                nav.style.backgroundColor = 'var(--header-footer-bg)';
+                nav.style.padding = '20px';
+                nav.style.borderRadius = '5px';
+            } else {
+                menuToggle.style.display = 'none';
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'row';
+                nav.style.position = 'static';
+                nav.style.backgroundColor = 'transparent';
+                nav.style.padding = '0';
+            }
+        }
+
+        window.addEventListener('resize', handleResponsiveMenu);
+        handleResponsiveMenu();
+    </script>
+</body>
+</html>
