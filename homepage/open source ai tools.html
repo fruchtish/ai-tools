@@ -1,155 +1,84 @@
-<html><head><base href="https://websim.ai/opensource-ai-tools">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Open Source AI Tools - AI Tools Market</title>
-<style>
-    :root {
-        --primary-color: #4CAF50;
-        --secondary-color: #45a049;
-        --background-color: #f5f5f5;
-        --text-color: #333;
-        --header-footer-bg: #2c3e50;
-    }
-
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-    body {
-        font-family: 'Roboto', sans-serif;
-        line-height: 1.6;
-        color: var(--text-color);
-        background-color: var(--background-color);
-    }
-
-    .container {
-        width: 100%;
-        max-width: 1440px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    header {
-        background-color: var(--header-footer-bg);
-        color: #fff;
-        padding: 20px 0;
-    }
-
-    .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo {
-        font-size: 24px;
-        font-weight: bold;
-    }
-
-    nav ul {
-        display: flex;
-        list-style-type: none;
-    }
-
-    nav ul li {
-        margin-left: 20px;
-    }
-
-    nav ul li a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    main {
-        padding: 40px 0;
-    }
-
-    h1 {
-        font-size: 36px;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .tools-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-    }
-
-    .tool-card {
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .tool-card img {
-        width: 80px;
-        height: 80px;
-        object-fit: contain;
-        margin-bottom: 15px;
-    }
-
-    .tool-name {
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-
-    .tool-description {
-        flex-grow: 1;
-        margin-bottom: 15px;
-    }
-
-    .tool-meta {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: auto;
-    }
-
-    .github-link {
-        background-color: var(--primary-color);
-        color: #fff;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 14px;
-        text-decoration: none;
-        transition: background-color 0.3s;
-    }
-
-    .github-link:hover {
-        background-color: var(--secondary-color);
-    }
-
-    .user-rating {
-        display: flex;
-        align-items: center;
-    }
-
-    .user-rating .star {
-        color: gold;
-        margin-right: 5px;
-    }
-
-    footer {
-        background-color: var(--header-footer-bg);
-        color: #fff;
-        padding: 20px 0;
-        text-align: center;
-    }
-
-    @media screen and (max-width: 768px) {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="https://fruchtish.github.io/ai-tools/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source AI Tools - AI Tools Market</title>
+    <link rel="stylesheet" href="/ai-tools/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
         .tools-grid {
-            grid-template-columns: 1fr;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
-    }
-</style>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+        .tool-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tool-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .tool-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .tool-description {
+            flex-grow: 1;
+            margin-bottom: 15px;
+        }
+
+        .tool-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .github-link {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .github-link:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .user-rating {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-rating .star {
+            color: gold;
+            margin-right: 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -158,9 +87,9 @@
                 <div class="logo">AI Tools Market</div>
                 <nav>
                     <ul>
-                        <li><a href="../">Home</a></li>
-                        <li><a href="../all-tools">All Tools</a></li>
-                        <li><a href="../submit">Submit Tool</a></li>
+                        <li><a href="/ai-tools/">Home</a></li>
+                        <li><a href="/ai-tools/homepage/all tools.html">All Tools</a></li>
+                        <li><a href="/ai-tools/homepage/submit.html">Submit Tool</a></li>
                     </ul>
                 </nav>
             </div>
@@ -261,7 +190,27 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 AI Tools Market. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">AI Tools Market</div>
+                    <p>&copy; 2023 AI Tools Market. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="/ai-tools/homepage/about.html">About</a></li>
+                        <li><a href="/ai-tools/homepage/contact.html">Contact</a></li>
+                        <li><a href="/ai-tools/homepage/privacy policy.html">Privacy Policy</a></li>
+                        <li><a href="/ai-tools/homepage/TC.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="newsletter-signup">
+                    <h3>Subscribe to our newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </footer>
 </body>

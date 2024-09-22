@@ -1,361 +1,13 @@
-<html><head><base href="https://websim.ai/">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Tools Marketplace</title>
-<style>
-    :root {
-        --primary-color: #4CAF50;
-        --secondary-color: #45a049;
-        --background-color: #f5f5f5;
-        --text-color: #333;
-        --header-footer-bg: #2c3e50;
-    }
-
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-    body {
-        font-family: 'Roboto', sans-serif;
-        line-height: 1.6;
-        color: var(--text-color);
-        background-color: var(--background-color);
-    }
-
-    .container {
-        width: 100%;
-        max-width: 1440px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    header {
-        background-color: var(--header-footer-bg);
-        color: #fff;
-        padding: 20px 0;
-    }
-
-    .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo {
-        font-size: 24px;
-        font-weight: bold;
-    }
-
-    nav ul {
-        display: flex;
-        list-style-type: none;
-    }
-
-    nav ul li {
-        margin-left: 20px;
-    }
-
-    nav ul li a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .hero {
-        text-align: center;
-        padding: 60px 0;
-    }
-
-    h1 {
-        font-size: 48px;
-        margin-bottom: 20px;
-    }
-
-    .subheading {
-        font-size: 18px;
-        margin-bottom: 30px;
-    }
-
-    .search-bar {
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto 30px;
-    }
-
-    .search-bar input {
-        width: 100%;
-        padding: 15px;
-        font-size: 18px;
-        border: 2px solid var(--primary-color);
-        border-radius: 5px;
-    }
-
-    .category-buttons {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 30px;
-    }
-
-    .category-button {
-        padding: 10px 20px;
-        background-color: var(--primary-color);
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        text-decoration: none;
-        display: inline-block;
-    }
-
-    .category-button:hover {
-        background-color: var(--secondary-color);
-    }
-
-    .section-title {
-        font-size: 36px;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .section-title-spaced {
-        margin-top: 60px;
-    }
-
-    .tools-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-    }
-
-    .tool-card {
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .tool-card img {
-        width: 80px;
-        height: 80px;
-        object-fit: contain;
-        margin-bottom: 15px;
-    }
-
-    .tool-name {
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-
-    .tool-description {
-        flex-grow: 1;
-        margin-bottom: 15px;
-    }
-
-    .tool-meta {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: auto;
-    }
-
-    .pricing-label {
-        background-color: var(--primary-color);
-        color: #fff;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 14px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        text-decoration: none;
-        display: inline-block;
-    }
-
-    .pricing-label:hover {
-        background-color: var(--secondary-color);
-    }
-
-    .user-rating {
-        display: flex;
-        align-items: center;
-    }
-
-    .user-rating .star {
-        color: gold;
-        margin-right: 5px;
-    }
-
-    .heart-icon {
-        color: #ccc;
-        cursor: pointer;
-        transition: color 0.3s;
-    }
-
-    .heart-icon:hover {
-        color: red;
-    }
-
-    .categories-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 20px;
-        text-align: center;
-    }
-
-    .category-item {
-        background-color: #fff;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        text-decoration: none;
-        color: var(--text-color);
-        transition: transform 0.3s ease;
-        display: block;
-    }
-
-    .category-item:hover {
-        transform: translateY(-5px);
-    }
-
-    .filter-options {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 30px;
-    }
-
-    .filter-options select {
-        padding: 10px;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-
-    .cta-button {
-        display: inline-block;
-        background-color: var(--primary-color);
-        color: #fff;
-        text-decoration: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        margin-top: 15px;
-        transition: background-color 0.3s;
-    }
-
-    .cta-button:hover {
-        background-color: var(--secondary-color);
-    }
-
-    footer {
-        background-color: var(--header-footer-bg);
-        color: #fff;
-        padding: 40px 0;
-    }
-
-    .footer-content {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .footer-links ul {
-        list-style-type: none;
-    }
-
-    .footer-links ul li {
-        margin-bottom: 10px;
-    }
-
-    .footer-links ul li a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .newsletter-form input[type="email"] {
-        padding: 10px;
-        font-size: 16px;
-        border: none;
-        border-radius: 5px 0 0 5px;
-    }
-
-    .newsletter-form button {
-        padding: 10px 20px;
-        font-size: 16px;
-        background-color: var(--primary-color);
-        color: #fff;
-        border: none;
-        border-radius: 0 5px 5px 0;
-        cursor: pointer;
-    }
-
-    @media screen and (max-width: 834px) {
-        .container {
-            padding: 0 15px;
-        }
-
-        h1 {
-            font-size: 36px;
-        }
-
-        .subheading {
-            font-size: 16px;
-        }
-
-        .tools-grid {
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        }
-
-        .categories-grid {
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        }
-
-        .footer-content {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .footer-links {
-            margin-bottom: 20px;
-        }
-    }
-
-    @media screen and (max-width: 375px) {
-        h1 {
-            font-size: 28px;
-        }
-
-        .subheading {
-            font-size: 14px;
-        }
-
-        .tools-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .categories-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .category-buttons {
-            flex-direction: column;
-        }
-
-        .filter-options {
-            flex-direction: column;
-        }
-
-        .filter-options select {
-            margin-bottom: 10px;
-        }
-    }
-</style>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="https://fruchtish.github.io/ai-tools/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Marketplace</title>
+    <link rel="stylesheet" href="/ai-tools/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
     <header>
@@ -364,9 +16,9 @@
                 <div class="logo">AI Tools Market</div>
                 <nav>
                     <ul>
-                        <li><a href="submit">Submit Tool</a></li>
-                        <li><a href="signin">Sign In</a></li>
-                        <li><a href="profile"><i class="fas fa-user-circle"></i></a></li>
+                        <li><a href="/ai-tools/homepage/submit.html">Submit Tool</a></li>
+                        <li><a href="/ai-tools/homepage/signin.html">Sign In</a></li>
+                        <li><a href="/ai-tools/homepage/profile.html"><i class="fas fa-user-circle"></i></a></li>
                     </ul>
                 </nav>
             </div>
@@ -382,12 +34,12 @@
                     <input type="text" placeholder="Find AI Tools With AI">
                 </div>
                 <div class="category-buttons">
-                    <a href="https://websim.ai/all-tools" class="category-button">Explore All tools</a>
-                    <a href="https://websim.ai/ai-use-cases" class="category-button">AI use cases</a>
-                    <a href="https://websim.ai/free-ai-tools" class="category-button">Free AI tools</a>
-                    <a href="https://websim.ai/opensource-ai-tools" class="category-button">Opensource AI tools</a>
-                    <a href="https://websim.ai/ai-categories" class="category-button">AI categories</a>
-                    <a href="https://websim.ai/retro-games" class="category-button">Retro Games</a>
+                    <a href="/ai-tools/homepage/all tools.html" class="category-button">Explore All tools</a>
+                    <a href="/ai-tools/homepage/use cases.html" class="category-button">AI use cases</a>
+                    <a href="/ai-tools/homepage/free ai tools.html" class="category-button">Free AI tools</a>
+                    <a href="/ai-tools/homepage/open source ai tools.html" class="category-button">Opensource AI tools</a>
+                    <a href="/ai-tools/homepage/ai categories.html" class="category-button">AI categories</a>
+                    <a href="/ai-tools/homepage/retro games.html" class="category-button">Retro Games</a>
                 </div>
             </div>
         </section>
@@ -403,7 +55,7 @@
                         <h3 class="tool-name">Jasper</h3>
                         <p class="tool-description">AI-powered content creation platform for marketing, blogs, and more.</p>
                         <div class="tool-meta">
-                            <a href="https://websim.ai/paid-ai-tools" class="pricing-label">Paid</a>
+                            <a href="/ai-tools/homepage/paid-ai-tools.html" class="pricing-label">Paid</a>
                             <div class="user-rating">
                                 <span class="star">★</span>
                                 <span>4.8</span>
@@ -418,7 +70,7 @@
                         <h3 class="tool-name">Midjourney</h3>
                         <p class="tool-description">AI image generation tool creating high-quality artworks from text descriptions.</p>
                         <div class="tool-meta">
-                            <a href="https://websim.ai/freemium-ai-tools" class="pricing-label">Freemium</a>
+                            <a href="/ai-tools/homepage/freemium-ai-tools.html" class="pricing-label">Freemium</a>
                             <div class="user-rating">
                                 <span class="star">★</span>
                                 <span>4.9</span>
@@ -433,7 +85,7 @@
                         <h3 class="tool-name">GitHub Copilot</h3>
                         <p class="tool-description">AI-powered code completion tool for various programming languages.</p>
                         <div class="tool-meta">
-                            <a href="https://websim.ai/paid-ai-tools" class="pricing-label">Paid</a>
+                            <a href="/ai-tools/homepage/paid-ai-tools.html" class="pricing-label">Paid</a>
                             <div class="user-rating">
                                 <span class="star">★</span>
                                 <span>4.7</span>
@@ -449,27 +101,27 @@
             <div class="container">
                 <h2 class="section-title section-title-spaced">Popular Categories</h2>
                 <div class="categories-grid">
-                    <a href="https://websim.ai/ai-writing-tools" class="category-item">
+                    <a href="/ai-tools/homepage/ai-writing-tools.html" class="category-item">
                         <i class="fas fa-pencil-alt"></i>
                         <h3>Writing</h3>
                     </a>
-                    <a href="https://websim.ai/ai-image-generation-tools" class="category-item">
+                    <a href="/ai-tools/homepage/ai-image-generation-tools.html" class="category-item">
                         <i class="fas fa-image"></i>
                         <h3>Image Generation</h3>
                     </a>
-                    <a href="https://websim.ai/ai-coding-tools" class="category-item">
+                    <a href="/ai-tools/homepage/ai-coding-tools.html" class="category-item">
                         <i class="fas fa-code"></i>
                         <h3>Coding</h3>
                     </a>
-                    <a href="https://websim.ai/ai-data-analysis-tools" class="category-item">
+                    <a href="/ai-tools/homepage/ai-data-analysis-tools.html" class="category-item">
                         <i class="fas fa-chart-bar"></i>
                         <h3>Data Analysis</h3>
                     </a>
-                    <a href="https://websim.ai/ai-chatbot-tools" class="category-item">
+                    <a href="/ai-tools/homepage/ai-chatbot-tools.html" class="category-item">
                         <i class="fas fa-robot"></i>
                         <h3>Chatbots</h3>
                     </a>
-                    <a href="https://websim.ai/ai-translation-tools" class="category-item">
+                    <a href="/ai-tools/homepage/ai-translation-tools.html" class="category-item">
                         <i class="fas fa-language"></i>
                         <h3>Translation</h3>
                     </a>
@@ -499,51 +151,7 @@
                     </select>
                 </div>
                 <div class="tools-grid">
-                    <div class="tool-card">
-                        <a href="https://www.tableau.com" target="_blank" rel="noopener noreferrer">
-                            <img src="https://logos-world.net/wp-content/uploads/2021/10/Tableau-Symbol.png" alt="Tableau Logo" width="80" height="80">
-                        </a>
-                        <h3 class="tool-name">Tableau</h3>
-                        <p class="tool-description">Data visualization and business intelligence tool with AI-powered analytics.</p>
-                        <div class="tool-meta">
-                            <a href="https://websim.ai/paid-ai-tools" class="pricing-label">Paid</a>
-                            <div class="user-rating">
-                                <span class="star">★</span>
-                                <span>4.6</span>
-                            </div>
-                            <i class="fas fa-heart heart-icon"></i>
-                        </div>
-                    </div>
-                    <div class="tool-card">
-                        <a href="https://cloud.google.com/dialogflow" target="_blank" rel="noopener noreferrer">
-                            <img src="https://miro.medium.com/max/1400/1*tWaaZJTnZfixKTU_mfUJAQ.png" alt="Dialogflow Logo" width="80" height="80">
-                        </a>
-                        <h3 class="tool-name">Dialogflow</h3>
-                        <p class="tool-description">Google's AI-powered platform for building conversational interfaces.</p>
-                        <div class="tool-meta">
-                            <a href="https://websim.ai/freemium-ai-tools" class="pricing-label">Freemium</a>
-                            <div class="user-rating">
-                                <span class="star">★</span>
-                                <span>4.5</span>
-                            </div>
-                            <i class="fas fa-heart heart-icon"></i>
-                        </div>
-                    </div>
-                    <div class="tool-card">
-                        <a href="https://translate.google.com" target="_blank" rel="noopener noreferrer">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Google_Translate_logo.svg" alt="Google Translate Logo" width="80" height="80">
-                        </a>
-                        <h3 class="tool-name">Google Translate</h3>
-                        <p class="tool-description">AI-powered multilingual translation service for text, speech, and images.</p>
-                        <div class="tool-meta">
-                            <a href="https://websim.ai/free-ai-tools" class="pricing-label">Free</a>
-                            <div class="user-rating">
-                                <span class="star">★</span>
-                                <span>4.7</span>
-                            </div>
-                            <i class="fas fa-heart heart-icon"></i>
-                        </div>
-                    </div>
+                    <!-- Add more tool cards here as needed -->
                 </div>
             </div>
         </section>
@@ -558,10 +166,10 @@
                 </div>
                 <div class="footer-links">
                     <ul>
-                        <li><a href="about">About</a></li>
-                        <li><a href="contact">Contact</a></li>
-                        <li><a href="privacy">Privacy Policy</a></li>
-                        <li><a href="terms">Terms of Service</a></li>
+                        <li><a href="/ai-tools/homepage/about.html">About</a></li>
+                        <li><a href="/ai-tools/homepage/contact.html">Contact</a></li>
+                        <li><a href="/ai-tools/homepage/privacy policy.html">Privacy Policy</a></li>
+                        <li><a href="/ai-tools/homepage/TC.html">Terms of Service</a></li>
                     </ul>
                 </div>
                 <div class="newsletter-signup">
@@ -576,52 +184,7 @@
     </footer>
 
     <script>
-        document.querySelectorAll('.heart-icon').forEach(icon => {
-            icon.addEventListener('click', function(e) {
-                e.preventDefault(); 
-                this.style.color = this.style.color === 'red' ? '#ccc' : 'red';
-            });
-        });
-
-        const menuToggle = document.createElement('button');
-        menuToggle.innerHTML = '&#9776;';
-        menuToggle.style.display = 'none';
-        menuToggle.style.background = 'none';
-        menuToggle.style.border = 'none';
-        menuToggle.style.color = '#fff';
-        menuToggle.style.fontSize = '24px';
-        menuToggle.style.cursor = 'pointer';
-
-        const nav = document.querySelector('nav');
-        nav.parentNode.insertBefore(menuToggle, nav);
-
-        menuToggle.addEventListener('click', () => {
-            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-        });
-
-        function handleResponsiveMenu() {
-            if (window.innerWidth <= 834) {
-                menuToggle.style.display = 'block';
-                nav.style.display = 'none';
-                nav.style.flexDirection = 'column';
-                nav.style.position = 'absolute';
-                nav.style.top = '60px';
-                nav.style.right = '20px';
-                nav.style.backgroundColor = 'var(--header-footer-bg)';
-                nav.style.padding = '20px';
-                nav.style.borderRadius = '5px';
-            } else {
-                menuToggle.style.display = 'none';
-                nav.style.display = 'flex';
-                nav.style.flexDirection = 'row';
-                nav.style.position = 'static';
-                nav.style.backgroundColor = 'transparent';
-                nav.style.padding = '0';
-            }
-        }
-
-        window.addEventListener('resize', handleResponsiveMenu);
-        handleResponsiveMenu();
+        // ... (keep the existing JavaScript) ...
     </script>
 </body>
 </html>

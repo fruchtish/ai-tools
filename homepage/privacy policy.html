@@ -1,119 +1,38 @@
-<html><head><base href="https://websim.ai/privacy">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy - AI Tools Market</title>
-<style>
-    :root {
-        --primary-color: #4CAF50;
-        --secondary-color: #45a049;
-        --background-color: #f5f5f5;
-        --text-color: #333;
-        --header-footer-bg: #2c3e50;
-    }
-
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-    body {
-        font-family: 'Roboto', sans-serif;
-        line-height: 1.6;
-        color: var(--text-color);
-        background-color: var(--background-color);
-    }
-
-    .container {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    header {
-        background-color: var(--header-footer-bg);
-        color: #fff;
-        padding: 20px 0;
-    }
-
-    .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo {
-        font-size: 24px;
-        font-weight: bold;
-    }
-
-    nav ul {
-        display: flex;
-        list-style-type: none;
-    }
-
-    nav ul li {
-        margin-left: 20px;
-    }
-
-    nav ul li a {
-        color: #fff;
-        text-decoration: none;
-    }
-
-    main {
-        padding: 40px 0;
-    }
-
-    h1 {
-        font-size: 36px;
-        margin-bottom: 20px;
-    }
-
-    h2 {
-        font-size: 24px;
-        margin-top: 30px;
-        margin-bottom: 15px;
-    }
-
-    p {
-        margin-bottom: 15px;
-    }
-
-    ul {
-        margin-bottom: 15px;
-        padding-left: 20px;
-    }
-
-    footer {
-        background-color: var(--header-footer-bg);
-        color: #fff;
-        padding: 20px 0;
-        margin-top: 40px;
-    }
-
-    .footer-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    @media screen and (max-width: 768px) {
-        .header-content, .footer-content {
-            flex-direction: column;
-            text-align: center;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="https://fruchtish.github.io/ai-tools/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - AI Tools Market</title>
+    <link rel="stylesheet" href="/ai-tools/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        main {
+            padding: 40px 0;
         }
 
-        nav ul {
-            margin-top: 20px;
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
         }
 
-        nav ul li {
-            margin: 0 10px;
+        h2 {
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
         }
-    }
-</style>
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -122,9 +41,9 @@
                 <div class="logo">AI Tools Market</div>
                 <nav>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/ai-tools/">Home</a></li>
+                        <li><a href="/ai-tools/homepage/about.html">About</a></li>
+                        <li><a href="/ai-tools/homepage/contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -189,13 +108,25 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2023 AI Tools Market. All rights reserved.</p>
-                <nav>
+                <div class="footer-logo">
+                    <div class="logo">AI Tools Market</div>
+                    <p>&copy; 2023 AI Tools Market. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
                     <ul>
-                        <li><a href="/terms">Terms of Service</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/ai-tools/homepage/about.html">About</a></li>
+                        <li><a href="/ai-tools/homepage/contact.html">Contact</a></li>
+                        <li><a href="/ai-tools/homepage/privacy policy.html">Privacy Policy</a></li>
+                        <li><a href="/ai-tools/homepage/TC.html">Terms of Service</a></li>
                     </ul>
-                </nav>
+                </div>
+                <div class="newsletter-signup">
+                    <h3>Subscribe to our newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
             </div>
         </div>
     </footer>
