@@ -216,15 +216,60 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
 }
 
 .nav-button:hover {
-    background-color: hsl(var(--secondary));
+    background-color: hsl(var(--accent));
+    border-color: hsl(var(--accent-foreground) / 0.1);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.nav-button.primary {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    border: none;
+}
+
+.nav-button.primary:hover {
+    background-color: hsl(var(--primary));
     opacity: 0.9;
 }
 
 .nav-button i {
     font-size: var(--font-size-base);
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+    body {
+        color-scheme: dark;
+    }
+
+    .nav-button {
+        background-color: hsl(var(--secondary));
+        color: hsl(var(--secondary-foreground));
+    }
+
+    .nav-button:hover {
+        background-color: hsl(var(--accent));
+    }
+
+    .category-button {
+        background-color: hsl(var(--card));
+        border-color: hsl(var(--border));
+    }
+
+    .category-button:hover {
+        background-color: hsl(var(--accent));
+        border-color: hsl(var(--accent-foreground) / 0.1);
+    }
+
+    .newsletter-signup {
+        background-color: hsl(var(--card));
+        border-color: hsl(var(--border));
+    }
 }
 
 .hero {
