@@ -435,23 +435,69 @@ footer {
     }
 
     nav ul {
-        margin-top: 20px;
+        margin-top: var(--spacing-md);
+        width: 100%;
+        gap: var(--spacing-sm);
     }
 
     nav ul li {
-        margin-left: 0;
-        margin-right: 20px;
+        flex: 1;
+    }
+
+    nav ul li a {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero {
+        padding: var(--spacing-2xl) 0;
     }
 
     h1 {
-        font-size: 36px;
+        font-size: var(--font-size-3xl);
+        padding: 0 var(--spacing-md);
     }
 
     .subheading {
-        font-size: 18px;
+        font-size: var(--font-size-lg);
+        padding: 0 var(--spacing-md);
+    }
+
+    .search-bar {
+        margin: 0 var(--spacing-md) var(--spacing-xl);
+    }
+
+    .category-buttons {
+        padding: 0 var(--spacing-md);
+        gap: var(--spacing-sm);
+    }
+
+    .category-button {
+        width: calc(50% - var(--spacing-sm));
+        justify-content: center;
+        padding: var(--spacing-sm) var(--spacing-md);
     }
 
     .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+        padding: 0 var(--spacing-md);
+    }
+
+    .footer-links, .newsletter-signup {
+        text-align: center;
+    }
+
+    .footer-links ul li a:hover {
+        transform: none;
+    }
+
+    .newsletter-form {
         flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .newsletter-form button {
+        width: 100%;
     }
 }
